@@ -30,8 +30,8 @@ public class MoneyTest {
 
     @Test
     void testEqualityFranc() {
-        assertEquals(Money.franc(5), new Franc(5));
-        assertNotEquals(Money.franc(5), new Franc(8));
+        assertEquals(Money.franc(5), Money.franc(5));
+        assertNotEquals(Money.franc(5), Money.franc(8));
     }
 
     @Test
