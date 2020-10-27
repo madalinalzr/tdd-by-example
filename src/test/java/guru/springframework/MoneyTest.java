@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class MoneyTest {
 
     @Test
-    void toReduceMondeyDifferentCurrency() {
+    void toReduceMoneyDifferentCurrency() {
         Bank bank = new Bank();
         bank.addRate("CHF", "USD", 2);
         Money result = bank.reduce(Money.franc(2), "USD");
