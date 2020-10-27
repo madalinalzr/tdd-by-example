@@ -28,6 +28,9 @@ public class Money implements Expression {
         return new Money(amount, "CHF");
     }
 
+    public Money reduce(String to){
+        return this;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,6 +54,6 @@ public class Money implements Expression {
     }
 
     public Expression plus(Money added) {
-        return new Money(amount + added.amount, currency);
+        return new Sum(this, added);
     }
 }

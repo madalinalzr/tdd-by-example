@@ -1,7 +1,7 @@
 package guru.springframework;
 
 public class Bank {
-    public Money reduce(Expression sum) {
-        return Money.dollar(10);
+    public Money reduce(Expression source, String currency) {
+        return source.reduce(currency);
     }
 }
